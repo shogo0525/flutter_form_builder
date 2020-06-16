@@ -185,6 +185,7 @@ class FormBuilderTextFieldState extends State<FormBuilderTextField> {
 
   @override
   void dispose() {
+    print('FormBuilderTextField dispose');
     _formState?.unregisterFieldKey(widget.attribute);
     if (widget.controller == null) {
       _effectiveController.dispose();

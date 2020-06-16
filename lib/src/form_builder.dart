@@ -61,15 +61,18 @@ class FormBuilderState extends State<FormBuilder> {
     setState(() {
       _value[attribute] = value;
     });
+    print('setAttributeValue: $_value');
   }
 
   void registerFieldKey(String attribute, GlobalKey key) {
     // assert(_fieldKeys.containsKey(attribute) == false, "Field with attribute '$attribute' already exists. Make sure that two or more fields don't have the same attribute name.");
     _fieldKeys[attribute] = key;
+    print('registerFieldKey: $_fieldKeys');
   }
 
   void unregisterFieldKey(String attribute) {
     _fieldKeys.remove(attribute);
+    print('unregisterFieldKey: $_fieldKeys');
   }
 
   /*changeAttributeValue(String attribute, dynamic newValue) {
